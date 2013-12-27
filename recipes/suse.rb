@@ -39,16 +39,16 @@ end
 homeshick "root" do
   keys node["workstation"]["suse"]["castles"]
 
-  only_if do
-    node["workstation"]["suse"]["castles"]
+  not_if do
+    node["workstation"]["suse"]["castles"].empty?
   end
 end
 
 sshkey "root" do
   keys node["workstation"]["suse"]["sshkeys"]
 
-  only_if do
-    node["workstation"]["suse"]["sshkeys"]
+  not_if do
+    node["workstation"]["suse"]["sshkeys"].empty?
   end
 end
 
@@ -57,8 +57,8 @@ homeshick node["workstation"]["suse"]["username"] do
   group node["workstation"]["suse"]["group"]
   home "/home/#{node["workstation"]["suse"]["username"]}"
 
-  only_if do
-    node["workstation"]["suse"]["castles"]
+  not_if do
+    node["workstation"]["suse"]["castles"].empty?
   end
 end
 
@@ -67,8 +67,8 @@ sshkey node["workstation"]["suse"]["username"] do
   group node["workstation"]["suse"]["group"]
   home "/home/#{node["workstation"]["suse"]["username"]}"
 
-  only_if do
-    node["workstation"]["suse"]["sshkeys"]
+  not_if do
+    node["workstation"]["suse"]["sshkeys"].empty?
   end
 end
 
