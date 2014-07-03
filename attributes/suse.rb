@@ -22,6 +22,7 @@ default["workstation"]["suse"]["packages"] = %w(
   tk
   ca-certificates-suse
   yakuake
+  nvidia-computeG03
 )
 
 default["workstation"]["suse"]["username"] = "tboerger"

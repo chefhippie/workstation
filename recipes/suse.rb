@@ -30,6 +30,14 @@ zypper_repository "suse-ca" do
   action :add
 end
 
+zypper_repository "nvidia" do
+  uri "ftp://download.nvidia.com/opensuse/13.1/"
+  key "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/repodata/repomd.xml.key"
+  title "Nvidia Graphics"
+
+  action :add
+end
+
 node["workstation"]["suse"]["packages"].each do |name|
   package name do
     action :install
