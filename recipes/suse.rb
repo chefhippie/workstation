@@ -23,8 +23,8 @@ include_recipe "sudo"
 include_recipe "zypper"
 
 zypper_repository "suse-ca" do
-  uri "http://download.suse.de/ibs/SUSE:/CA/openSUSE_12.2/"
-  key "http://download.suse.de/ibs/SUSE:/CA/openSUSE_12.2/repodata/repomd.xml.key"
+  uri "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/"
+  key "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/repodata/repomd.xml.key"
   title "SUSE Internal CA Certificate"
 
   action :add
