@@ -25,6 +25,27 @@ default["workstation"]["suse"]["packages"] = %w(
   nvidia-computeG03
 )
 
+default["workstation"]["suse"]["repos"] = [
+  {
+    "name" => "nvidia",
+    "uri" => "ftp://download.nvidia.com/opensuse/#{node["platform_version"]}/",
+    "key" => nil,
+    "title" => "Nvidia Graphics"
+  },
+  {
+    "name" => "kde-current",
+    "uri" => "http://download.opensuse.org/repositories/KDE:/Current/openSUSE_#{node["platform_version"]}/",
+    "key" => "http://download.opensuse.org/repositories/KDE:/Current/openSUSE_#{node["platform_version"]}/repodata/repomd.xml.key",
+    "title" => "KDE Current Release"
+  },
+  {
+    "name" => "suse-ca",
+    "uri" => "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/",
+    "key" => "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/repodata/repomd.xml.key",
+    "title" => "SUSE Internal CA Certificate"
+  }
+]
+
 default["workstation"]["suse"]["username"] = "tboerger"
 default["workstation"]["suse"]["group"] = "suse"
 

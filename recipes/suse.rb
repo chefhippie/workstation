@@ -22,20 +22,14 @@ include_recipe "sshkey"
 include_recipe "sudo"
 include_recipe "zypper"
 
-zypper_repository "suse-ca" do
-  uri "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/"
-  key "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/repodata/repomd.xml.key"
-  title "SUSE Internal CA Certificate"
+node["workstation"]["suse"]["repos"].each do |repo|
+  zypper_repository repo["name"] do
+    uri repo["uri"]
+    key repo["key"]
+    title repo["title"]
 
-  action :add
-end
-
-zypper_repository "nvidia" do
-  uri "ftp://download.nvidia.com/opensuse/13.1/"
-  key "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/repodata/repomd.xml.key"
-  title "Nvidia Graphics"
-
-  action :add
+    action :add
+  end
 end
 
 node["workstation"]["suse"]["packages"].each do |name|
