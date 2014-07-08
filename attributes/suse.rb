@@ -74,8 +74,9 @@ default["workstation"]["suse"]["repositories"] =  {
 }
 
 default["workstation"]["suse"]["symlinks"] = {
-  "/home/#{node["workstation"]["suse"]["username"]}/Projects/cloud/docs/dev-setup/sync-repos" => "/usr/local/bin/sync-suse-repos",
   "/home/#{node["workstation"]["suse"]["username"]}/Projects/cloud/automation/scripts/jenkins/track-upstream-and-package.pl" => "/usr/local/bin/track-upstream-and-package",
+  "/home/#{node["workstation"]["suse"]["username"]}/Projects/cloud/automation/scripts/mkcloud" => "/usr/local/bin/mkcloud",
+  "/home/#{node["workstation"]["suse"]["username"]}/Projects/cloud/automation/scripts/mkchroot" => "/usr/local/bin/mkchroot",
   "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/git-config/bin/git-add-prefix" => "/usr/local/bin/git-add-prefix",
   "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/git-config/bin/git-cherry-menu" => "/usr/local/bin/git-cherry-menu",
   "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/git-config/bin/git-compare-upstream" => "/usr/local/bin/git-compare-upstream",
