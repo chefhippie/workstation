@@ -27,18 +27,6 @@ default["workstation"]["suse"]["packages"] = %w(
 
 default["workstation"]["suse"]["repos"] = [
   {
-    "name" => "nvidia",
-    "uri" => "ftp://download.nvidia.com/opensuse/#{node["platform_version"]}/",
-    "key" => nil,
-    "title" => "Nvidia Graphics"
-  },
-  {
-    "name" => "kde-current",
-    "uri" => "http://download.opensuse.org/repositories/KDE:/Current/openSUSE_#{node["platform_version"]}/",
-    "key" => "http://download.opensuse.org/repositories/KDE:/Current/openSUSE_#{node["platform_version"]}/repodata/repomd.xml.key",
-    "title" => "KDE Current Release"
-  },
-  {
     "name" => "suse-ca",
     "uri" => "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/",
     "key" => "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/repodata/repomd.xml.key",
@@ -51,7 +39,8 @@ default["workstation"]["suse"]["group"] = "suse"
 
 default["workstation"]["suse"]["castles"] = {
   "tboerger-base" => "tboerger/homeshick-base",
-  "tboerger-linux" => "tboerger/homeshick-linux"
+  "tboerger-linux" => "tboerger/homeshick-linux",
+  "tboerger-linux" => "tboerger/homeshick-suse"
 }
 
 default["workstation"]["suse"]["sshkeys"] =  {
