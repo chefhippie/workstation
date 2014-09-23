@@ -38,7 +38,7 @@ default["workstation"]["suse"]["group"] = "suse"
 default["workstation"]["suse"]["castles"] = {
   "tboerger-base" => "tboerger/homeshick-base",
   "tboerger-linux" => "tboerger/homeshick-linux",
-  "tboerger-linux" => "tboerger/homeshick-suse"
+  "tboerger-suse" => "tboerger/homeshick-suse"
 }
 
 default["workstation"]["suse"]["sshkeys"] =  {
