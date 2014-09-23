@@ -89,6 +89,8 @@ node["workstation"]["suse"]["repositories"].each do |repo, name|
       "HOME" => "/home/#{node["workstation"]["suse"]["username"]}"
     )
 
+    returns [0, 128]
+
     not_if do 
       ::File.directory? name
     end
