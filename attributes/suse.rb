@@ -21,8 +21,6 @@ default["workstation"]["suse"]["packages"] = %w(
   iwidgets
   tk
   ca-certificates-suse
-  yakuake
-  nvidia-computeG03
 )
 
 default["workstation"]["suse"]["repos"] = [
