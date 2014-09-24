@@ -21,6 +21,7 @@ default["workstation"]["suse"]["packages"] = %w(
   iwidgets
   tk
   ca-certificates-suse
+  pinentry-gtk2
 )
 
 default["workstation"]["suse"]["repos"] = [
