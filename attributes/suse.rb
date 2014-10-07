@@ -78,5 +78,6 @@ default["workstation"]["suse"]["symlinks"] = {
   "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/git-config/bin/git-sync-upstream" => "/usr/local/bin/git-sync-upstream",
   "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/git-config/bin/git-upstream" => "/usr/local/bin/git-upstream",
   "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/git-config/bin/git-url-rewrite" => "/usr/local/bin/git-url-rewrite",
-  "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/git-config/bin/git-wip" => "/usr/local/bin/git-wip"
+  "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/git-config/bin/git-wip" => "/usr/local/bin/git-wip",
+  "/usr/bin/urxvt-256color" => "/usr/local/bin/urxvt"
 }
