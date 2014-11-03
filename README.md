@@ -1,5 +1,5 @@
-suse Cookbook
-=============
+workstation Cookbook
+====================
 
 Note
 ----
