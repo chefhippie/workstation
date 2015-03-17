@@ -28,7 +28,7 @@ node["workstation"]["suse"]["repos"].each do |repo|
     key repo["key"]
     title repo["title"]
 
-    action :add
+    action [:add, :refresh]
   end
 end
 
