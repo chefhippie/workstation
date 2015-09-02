@@ -29,8 +29,8 @@ default["workstation"]["suse"]["packages"] = %w(
 
 default["workstation"]["suse"]["repos"] = [{
   "name" => "suse-ca",
-  "uri" => "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/",
-  "key" => "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"]}/repodata/repomd.xml.key",
+  "uri" => "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"].to_i.to_s == node["platform_version"] ? "Tumbleweed" : node["platform_version"]}/",
+  "key" => "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"].to_i.to_s == node["platform_version"] ? "Tumbleweed" : node["platform_version"]}/repodata/repomd.xml.key",
   "title" => "SUSE Internal CA Certificate"
 }]
 
