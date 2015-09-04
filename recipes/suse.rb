@@ -109,7 +109,6 @@ end
 
 remote_file "/usr/local/bin/pastebin" do
   source "http://pastebin.suse.de/paste.pl"
-  checksum "c654a304fdf297549af923a70229dd65"
   mode 0755
 
   action :create
@@ -117,7 +116,6 @@ end
 
 remote_file "/usr/local/bin/imagebin" do
   source "http://imagebin.suse.de/imageupload.sh"
-  checksum "4933825ed1e2edaabc5a1b149f5ac224"
   mode 0755
 
   action :create
