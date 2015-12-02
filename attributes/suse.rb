@@ -17,6 +17,17 @@
 # limitations under the License.
 #
 
+repo = case node["platform_version"]
+when /\A13\.\d+\z/
+  "openSUSE_#{node["platform_version"]}"
+when /\A42\.\d+\z/
+  "openSUSE_Leap_#{node["platform_version"]}"
+when /\A\d{8}\z/
+  "openSUSE_Tumbleweed"
+else
+  raise "Unsupported SUSE version"
+end
+
 default["workstation"]["suse"]["username"] = "tboerger"
 default["workstation"]["suse"]["group"] = "suse"
 
@@ -29,8 +40,8 @@ default["workstation"]["suse"]["packages"] = %w(
 
 default["workstation"]["suse"]["repos"] = [{
   "name" => "suse-ca",
-  "uri" => "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"].to_i.to_s == node["platform_version"] ? "Tumbleweed" : node["platform_version"]}/",
-  "key" => "http://download.suse.de/ibs/SUSE:/CA/openSUSE_#{node["platform_version"].to_i.to_s == node["platform_version"] ? "Tumbleweed" : node["platform_version"]}/repodata/repomd.xml.key",
+  "uri" => "http://download.suse.de/ibs/SUSE:/CA/#{repo}/",
+  "key" => "http://download.suse.de/ibs/SUSE:/CA/#{repo}/repodata/repomd.xml.key",
   "title" => "SUSE Internal CA Certificate"
 }]
 
