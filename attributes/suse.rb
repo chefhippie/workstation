@@ -48,6 +48,7 @@ default["workstation"]["suse"]["repos"] = [{
 default["workstation"]["suse"]["castles"] = {
   "tboerger-base" => "tboerger/homeshick-base",
   "tboerger-linux" => "tboerger/homeshick-linux",
+  "tboerger-vim" => "tboerger/homeshick-vim",
   "tboerger-suse" => "tboerger/homeshick-suse"
 }
 
