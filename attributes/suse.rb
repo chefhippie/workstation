@@ -65,6 +65,7 @@ default["workstation"]["suse"]["repositories"] =  {
 
   "git@github.com:tboerger/homeshick-base.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/homeshick-base",
   "git@github.com:tboerger/homeshick-linux.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/homeshick-linux",
+  "git@github.com:tboerger/homeshick-vim.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/homeshick-vim",
   "git@github.com:tboerger/homeshick-suse.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/homeshick-suse"
 }
 
