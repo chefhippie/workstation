@@ -62,7 +62,7 @@ default["workstation"]["suse"]["repositories"] =  {
   "git@github.com:SUSE/cloud.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/cloud/docs",
   "git@github.com:SUSE-Cloud/automation.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/cloud/automation",
 
-  "git@github.com:tboerger/workstation.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/chef/workstation",
+  "git@github.com:tboerger/workstation.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/chefhippie/workstation",
 
   "git@github.com:tboerger/homeshick-base.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/homeshick-base",
   "git@github.com:tboerger/homeshick-linux.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/homeshick-linux",
