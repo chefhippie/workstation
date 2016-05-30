@@ -107,14 +107,14 @@ node["workstation"]["suse"]["symlinks"].each do |source, destination|
   end
 end
 
-remote_file "/usr/local/bin/pastebin" do
+remote_file "/usr/bin/pastebin" do
   source "http://pastebin.suse.de/paste.pl"
   mode 0755
 
   action :create
 end
 
-remote_file "/usr/local/bin/imagebin" do
+remote_file "/usr/bin/imagebin" do
   source "http://imagebin.suse.de/imageupload.sh"
   mode 0755
 

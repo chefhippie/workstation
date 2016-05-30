@@ -59,9 +59,6 @@ default["workstation"]["suse"]["sshkeys"] =  {
 }
 
 default["workstation"]["suse"]["repositories"] =  {
-  "git@github.com:SUSE/cloud.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/cloud/docs",
-  "git@github.com:SUSE-Cloud/automation.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/cloud/automation",
-
   "git@github.com:tboerger/workstation.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/chefhippie/workstation",
 
   "git@github.com:tboerger/homeshick-base.git" => "/home/#{node["workstation"]["suse"]["username"]}/Projects/misc/homeshick-base",
@@ -71,8 +68,5 @@ default["workstation"]["suse"]["repositories"] =  {
 }
 
 default["workstation"]["suse"]["symlinks"] = {
-  "/home/#{node["workstation"]["suse"]["username"]}/Projects/cloud/automation/scripts/jenkins/track-upstream-and-package.pl" => "/usr/local/bin/track-upstream-and-package",
-  "/home/#{node["workstation"]["suse"]["username"]}/Projects/cloud/automation/scripts/mkcloud" => "/usr/local/bin/mkcloud",
-
   "/usr/bin/urxvt-256color" => "/usr/local/bin/urxvt"
 }
